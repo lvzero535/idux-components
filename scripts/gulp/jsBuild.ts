@@ -6,8 +6,8 @@ import { componentsRootDir, outRootDir } from "../Config";
 import { isDirectory } from "./helper";
 import { createRollupConfig } from "./rollup.config";
 
-async function compileJs(inputFile: string, outputFile: string) {
-  const { output, ...input } = createRollupConfig(inputFile, outputFile);
+async function compileJs(inputFile: string, outputFile: string, replace?: boolean) {
+  const { output, ...input } = createRollupConfig(inputFile, outputFile, replace);
   const bundle = await rollup(input);
   bundle.write(output as OutputOptions);
 }
@@ -18,7 +18,7 @@ async function compileJs(inputFile: string, outputFile: string) {
 export const indexBuild: TaskFunction = async (done) => {
   const input = `${componentsRootDir}/index.ts`;
   const output = `${outRootDir}/index.js`
-  await compileJs(input, output);
+  await compileJs(input, output, true);
   done();
 }
 

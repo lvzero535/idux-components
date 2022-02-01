@@ -17,6 +17,7 @@
     "vue": "^3.2.25"
   },
   "devDependencies": {
+    "@rollup/plugin-replace": "^3.0.1",
     "@types/fs-extra": "^9.0.13",
     "@types/gulp": "^4.0.9",
     "@types/less": "^3.0.3",
@@ -26,6 +27,7 @@
     "fs-extra": "^10.0.0",
     "gulp": "^4.0.2",
     "less": "^4.1.2",
+    "less-plugin-clean-css": "^1.5.1",
     "rollup": "^2.66.0",
     "rollup-plugin-typescript2": "^0.31.1",
     "rollup-plugin-vue": "^6.0.0",

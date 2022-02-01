@@ -1,6 +1,8 @@
 {
   "compilerOptions": {
     "baseUrl": ".",
+    "outDir": "lib",
+    "declarationDir": "lib",
     "target": "esnext",
     "useDefineForClassFields": true,
     "moduleResolution": "node",
@@ -9,7 +11,7 @@
     "sourceMap": true,
     "resolveJsonModule": true,
     "esModuleInterop": true,
-    // "declaration": true, // 生成声明文件
+    "declaration": true, // 生成声明文件
     "lib": ["esnext", "dom"],
     "paths": {
       "@sdv": ["./packages"],

@@ -24,6 +24,7 @@
 1. 解析vue `npm i rollup-plugin-vue -D`
 2. 解析ts `npm i rollup-plugin-typescript2 -D`
 3. 解析tsx `npm i @vitejs/plugin-vue-jsx -D`
+4. 全量打包的index.js文件不需要把组件内容打包进去，把组件当作外部依赖，因为组件单独打包了，全量的使用单个的就好。
 
 ## gulp
 
@@ -33,7 +34,8 @@
 ## less
 
 1. 使用less.js手动编译
-2. less文件内的相对路径可以Less.Options配置的paths解决
+2. less文件内的相对路径可以Less.Options配置的paths解决，当前paths的值是编译文件的路径
+3. npm install -D less-plugin-clean-css 压缩
 
 ## npm
 
@@ -43,3 +45,4 @@
 ## typescript
 
 1. 生成声明文件 `tsconfig.json` 配置 `"declaration": true`
+2. 声明文件按目录生成需要在`tsconfig.json`配置`"outDir": "lib", "declarationDir": "lib",`，且rollup的ts插件中加上`useTsconfigDeclarationDir: true,`

@@ -1,7 +1,7 @@
 import type { App } from "vue";
-import { IsButton } from "./button";
-import { IsInput } from "./input";
-import { IsSelect } from "./select";
+import { IsButton } from "@sdv/components/button";
+import { IsInput } from "@sdv/components/input";
+import { IsSelect } from "@sdv/components/select";
 
 const components = [
   IsButton, IsInput, IsSelect

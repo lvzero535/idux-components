@@ -1,10 +1,10 @@
 import { parallel, series, task } from 'gulp'
 import { beforeStart } from './helper'
 import { componentsBuild, indexBuild } from './jsBuild'
-import { buildStyle } from './less'
+import { componentsBuildStyle, indexBuildStyle } from './less'
 
 
-task('style', series(beforeStart, buildStyle))
-task('components', series(beforeStart, componentsBuild))
-task('index', series(beforeStart, componentsBuild))
-task('build', series(beforeStart, parallel(indexBuild, componentsBuild)));
+task('style', parallel(indexBuildStyle, componentsBuildStyle))
+task('components', series(componentsBuild))
+task('index', series(componentsBuild))
+task('build', parallel(indexBuild, componentsBuild));
