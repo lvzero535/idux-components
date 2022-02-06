@@ -14,9 +14,9 @@
     "declaration": true, // 生成声明文件
     "lib": ["esnext", "dom"],
     "paths": {
-      "@sdv": ["./packages"],
-      "@sdv/*": ["./packages/*"],
+      "@lvdavis": ["./packages"],
+      "@lvdavis/*": ["./packages/*"],
     }
   },
-  "include": ["./**/*.ts", "./**/*.d.ts", "./**/*.tsx", "./**/*.vue", "env.d.ts"]
+  "exclude": ["node_modules"]
 }

@@ -1,5 +1,5 @@
 {
-  "name": "idux-service",
+  "name": "lvdavis",
   "version": "0.0.2",
   "main": "./lib/index.js",
   "scripts": {
@@ -8,7 +8,9 @@
     "build:index": "gulp index --gulpfile ./scripts/gulp/gulpfile.ts",
     "build:cmps": "gulp components --gulpfile ./scripts/gulp/gulpfile.ts",
     "build:css": "gulp style --gulpfile ./scripts/gulp/gulpfile.ts",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "pub:cmp": "npm publish ./lib/components --access public",
+    "pub:utils": "npm publish ./lib/utils --access public"
   },
   "dependencies": {
     "@idux/cdk": "^1.0.0-alpha.4",
@@ -26,6 +28,7 @@
     "@vitejs/plugin-vue-jsx": "^1.3.3",
     "fs-extra": "^10.0.0",
     "gulp": "^4.0.2",
+    "lerna": "^4.0.0",
     "less": "^4.1.2",
     "less-plugin-clean-css": "^1.5.1",
     "rollup": "^2.66.0",

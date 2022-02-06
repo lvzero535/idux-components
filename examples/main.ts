@@ -2,8 +2,8 @@ import { createApp } from 'vue'
 import App from './App.vue'
 
 // import IsButton from '@sdv/components/button';
-import '@sdv/components/default.less'
-import SdvCmp from '@sdv/components';
+import '@lvdavis/components/default.less'
+import SdvCmp from '@lvdavis/components';
 
 const app = createApp(App)
 app.use(SdvCmp)

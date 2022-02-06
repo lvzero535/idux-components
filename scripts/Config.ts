@@ -11,6 +11,11 @@ export const projectRoot = join(__dirname, '..')
 export const componentsRootDir = join(projectRoot, './packages/components')
 
 /**
+ * 工具根据目录
+ */
+ export const utilsRootDir = join(projectRoot, './packages/utils')
+
+/**
  * 输出文件的根目录
  */
 export const outRootDir = join(projectRoot, './lib')

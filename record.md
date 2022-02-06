@@ -25,6 +25,7 @@
 2. 解析ts `npm i rollup-plugin-typescript2 -D`
 3. 解析tsx `npm i @vitejs/plugin-vue-jsx -D`
 4. 全量打包的index.js文件不需要把组件内容打包进去，把组件当作外部依赖，因为组件单独打包了，全量的使用单个的就好。
+5. `rollup-plugin-typescript2` 的tsconfigOverride属性，如果是数组，值会合并。
 
 ## gulp
 
@@ -41,6 +42,9 @@
 
 1. npm publish 发布
 2. npm login登录, 登录的是npm官网
+3. 发布带有@的包即是，scoped
+   1. 在npm上创建一个org
+   2. 发布时npm publish --access public.
 
 ## typescript
 

@@ -1,33 +1,28 @@
 import vue from 'rollup-plugin-vue';
 import ts from 'rollup-plugin-typescript2';
 import vueJsx from '@vitejs/plugin-vue-jsx';
-import replace from '@rollup/plugin-replace'
 
 const externalDeps = [
-  'vue', '@idux', '@sdv'
+  'vue', '@idux', '@lvdavis'
 ];
 
-export function createRollupConfig (input: string, file: string, isReplace?: boolean) {
+export function createRollupConfig (input: string, file: string, packageName: string) {
   const external = (id: string) => externalDeps.some((item) => new RegExp(`^${item}`).test(id));
+  console.log('packageName ===>', packageName)
   const plugins = [
     vue(),
     ts({
+      verbosity: 2,
       useTsconfigDeclarationDir: true,
       tsconfigOverride: {
-        include: ['packages/**/*', 'typings/*'],
+        compilerOptions: {
+          declarationDir: 'lib/' + packageName,
+        },
+        include: ['packages/' + packageName + '/**/*', 'typings/*']
       }
     }),
     vueJsx()
   ];
-  if (isReplace) {
-    plugins.push(
-      replace({
-        values: {
-          '@sdv/components': JSON.stringify('.')
-        },
-      })
-    )
-  }
   return {
     input,
     external,

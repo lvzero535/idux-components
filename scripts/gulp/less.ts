@@ -32,8 +32,8 @@ export const indexBuildStyle: TaskFunction = async (done) => {
   const savePath = outRootDir;
   const rootPath = componentsRootDir;
   await Promise.all([
-    compileLess(lessContent, join(savePath, 'index.css'), rootPath),
-    compileLess(lessContent, join(savePath, 'index.min.css'), rootPath, true),
+    compileLess(lessContent, join(savePath, 'components/index.css'), rootPath),
+    compileLess(lessContent, join(savePath, 'components/index.min.css'), rootPath, true),
   ]);
   done();
 }
@@ -50,7 +50,7 @@ export const indexBuildStyle: TaskFunction = async (done) => {
     const lessContent = readFileSync(join(componentsRootDir, componentDir, 'style/index.less'), {
       encoding: 'utf8'
     });
-    const savePath = join(outRootDir, componentDir, 'style');
+    const savePath = join(outRootDir, 'components', componentDir, 'style');
     const rootPath = join(componentsRootDir, componentDir, 'style');
     ensureDirSync(savePath);
     return compileLess(lessContent, join(savePath, 'index.css'), rootPath);
