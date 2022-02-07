@@ -13,6 +13,22 @@
     "pub:utils": "npm publish ./lib/utils --access public",
     "fmt": "prettier --write ."
   },
+  "lint-staged": {
+    "*.{js,ts,tsx,vue,json}": [
+      "prettier --write"
+    ],
+    "*.{js,ts,tsx,vue}": [
+      "eslint"
+    ],
+    "*.less": [
+      "stylelint"
+    ]
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
   "dependencies": {
     "@idux/cdk": "^1.0.0-alpha.4",
     "@idux/components": "^1.0.0-alpha.4",
