@@ -2,6 +2,15 @@
   "name": "lvdavis",
   "version": "0.0.2",
   "main": "./lib/index.js",
+  "keywords": [
+    "idux",
+    "typescript",
+    "vue3",
+    "less",
+    "gulp",
+    "rollup",
+    "components"
+  ],
   "scripts": {
     "dev": "vite",
     "build": "gulp build --gulpfile ./scripts/gulp/gulpfile.ts",
