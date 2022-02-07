@@ -1,1 +1,1 @@
-import '@sdv/components/default.less';
+import '@sdv/components/default.less'

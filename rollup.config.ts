@@ -1,6 +1,6 @@
-import vue from 'rollup-plugin-vue';
-import ts from 'rollup-plugin-typescript2';
-import vueJsx from '@vitejs/plugin-vue-jsx';
+import vue from 'rollup-plugin-vue'
+import ts from 'rollup-plugin-typescript2'
+import vueJsx from '@vitejs/plugin-vue-jsx'
 
 export default {
   input: './packages/components/index.ts',
@@ -9,12 +9,8 @@ export default {
     file: './lib/index.js',
     format: 'es',
     globals: {
-      vue: 'Vue'
+      vue: 'Vue',
     },
   },
-  plugins: [
-    vue(),
-    ts(),
-    vueJsx()
-  ]
+  plugins: [vue(), ts(), vueJsx()],
 }

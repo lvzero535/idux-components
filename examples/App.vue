@@ -9,7 +9,7 @@ import HelloWorld from './components/HelloWorld.vue'
   <HelloWorld msg="Hello Vue 3 + TypeScript + Vite" />
   <IsButton text="IsButtonTest"></IsButton>
   <IsSelect></IsSelect>
-  <br >
+  <br />
   <IsInput></IsInput>
 </template>
 

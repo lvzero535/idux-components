@@ -1,1 +1,1 @@
-@import '@idux/components/default.min.css';@import '@idux/pro/default.min.css';.is-button{color:#f0f8ff}.is-button .a{color:#fff}.is-input{color:#0ff}.is-select{color:red}
+@import '@idux/components/default.min.css';@import '@idux/pro/default.min.css';.is-button{color:red}.is-button .a{color:#fff}.is-button a{cursor:pointer}.is-input{color:#0ff}.is-select{color:red}

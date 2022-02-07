@@ -2,15 +2,14 @@
 // import type { ButtonProps } from './types';
 
 interface Props {
-  text: string;
+  text: string
 }
 // console.log(ButtonProps, Props)
-defineProps<Props>();
-
+defineProps<Props>()
 </script>
 <script lang="ts">
 export default {
-  name: 'IsButton'
+  name: 'IsButton',
 }
 </script>
 <template>

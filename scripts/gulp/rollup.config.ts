@@ -1,13 +1,11 @@
-import vue from 'rollup-plugin-vue';
-import ts from 'rollup-plugin-typescript2';
-import vueJsx from '@vitejs/plugin-vue-jsx';
+import vue from 'rollup-plugin-vue'
+import ts from 'rollup-plugin-typescript2'
+import vueJsx from '@vitejs/plugin-vue-jsx'
 
-const externalDeps = [
-  'vue', '@idux', '@lvdavis'
-];
+const externalDeps = ['vue', '@idux', '@lvdavis']
 
-export function createRollupConfig (input: string, file: string, packageName: string) {
-  const external = (id: string) => externalDeps.some((item) => new RegExp(`^${item}`).test(id));
+export function createRollupConfig(input: string, file: string, packageName: string) {
+  const external = (id: string) => externalDeps.some(item => new RegExp(`^${item}`).test(id))
   console.log('packageName ===>', packageName)
   const plugins = [
     vue(),
@@ -18,11 +16,11 @@ export function createRollupConfig (input: string, file: string, packageName: st
         compilerOptions: {
           declarationDir: 'lib/' + packageName,
         },
-        include: ['packages/' + packageName + '/**/*', 'typings/*']
-      }
+        include: ['packages/' + packageName + '/**/*', 'typings/*'],
+      },
     }),
-    vueJsx()
-  ];
+    vueJsx(),
+  ]
   return {
     input,
     external,
@@ -31,8 +29,8 @@ export function createRollupConfig (input: string, file: string, packageName: st
       file,
       format: 'esm',
       globals: {
-        vue: 'Vue'
-      }
-    }
+        vue: 'Vue',
+      },
+    },
   }
 }

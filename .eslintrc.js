@@ -22,4 +22,5 @@ module.exports = {
   rules: {
     quotes: ['error', 'single'],
   },
+  ignorePatterns: ['lib', 'node_modules', '**/*.md'],
 }

@@ -1,15 +1,15 @@
-import { IxSelect, IxSelectOption } from '@idux/components/select';
-import { ref, watch } from 'vue';
-import { defineComponent } from 'vue';
-import { IsSelectProps } from './types';
+import { IxSelect, IxSelectOption } from '@idux/components/select'
+import { ref, watch } from 'vue'
+import { defineComponent } from 'vue'
+import { IsSelectProps } from './types'
 
 export default defineComponent({
   name: 'IsSelect',
   props: IsSelectProps,
   setup(props) {
     const value = ref('tom')
-    watch(value, (nv) => {
-      console.log('===> ',nv);
+    watch(value, nv => {
+      console.log('===> ', nv)
     })
     // const options = props.options;
     const options = [
@@ -18,9 +18,9 @@ export default defineComponent({
       { key: 3, label: 'Speike', value: 'speike', disabled: true },
     ]
     return () => {
-      const selectOption = options.map((option) => (
+      const selectOption = options.map(option => (
         <IxSelectOption key={option.key} value={option.value} disabled={option.disabled}>
-          <span style="margin-left: 8px">{ option.label }</span>
+          <span style="margin-left: 8px">{option.label}</span>
         </IxSelectOption>
       ))
       return (
@@ -29,5 +29,5 @@ export default defineComponent({
         </IxSelect>
       )
     }
-  }
+  },
 })

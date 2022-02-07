@@ -10,7 +10,8 @@
     "build:css": "gulp style --gulpfile ./scripts/gulp/gulpfile.ts",
     "preview": "vite preview",
     "pub:cmp": "npm publish ./lib/components --access public",
-    "pub:utils": "npm publish ./lib/utils --access public"
+    "pub:utils": "npm publish ./lib/utils --access public",
+    "fmt": "prettier --write ."
   },
   "dependencies": {
     "@idux/cdk": "^1.0.0-alpha.4",

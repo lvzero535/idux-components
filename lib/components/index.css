@@ -1,10 +1,13 @@
 @import '@idux/components/default.min.css';
 @import '@idux/pro/default.min.css';
 .is-button {
-  color: aliceblue;
+  color: red;
 }
 .is-button .a {
   color: #fff;
+}
+.is-button a {
+  cursor: pointer;
 }
 .is-input {
   color: aqua;

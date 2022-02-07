@@ -1,6 +1,9 @@
 .is-button {
-  color: aliceblue;
+  color: red;
 }
 .is-button .a {
   color: #fff;
+}
+.is-button a {
+  cursor: pointer;
 }
