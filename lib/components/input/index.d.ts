@@ -1,5 +1,5 @@
-import IsInput from './src/Input';
+import IxsInput from './src/Input';
 import type { App } from 'vue';
-export { IsInput };
+export { IxsInput };
 declare const _default: (app: App) => void;
 export default _default;

@@ -1,9 +1,9 @@
 import type { App } from 'vue'
-import { IsButton } from '@lvdavis/components/button'
-import { IsInput } from '@lvdavis/components/input'
-import { IsSelect } from '@lvdavis/components/select'
+import { IxsButton } from '@ixsu/components/button'
+import { IxsInput } from '@ixsu/components/input'
+import { IxsSelect } from '@ixsu/components/select'
 
-const components = [IsButton, IsInput, IsSelect]
+const components = [IxsButton, IxsInput, IxsSelect]
 
 export default (app: App) => {
   components.forEach(component => app.component(component.name, component))

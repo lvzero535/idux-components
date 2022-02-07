@@ -14,8 +14,8 @@
     "declaration": true, // 生成声明文件
     "lib": ["esnext", "dom"],
     "paths": {
-      "@lvdavis": ["./packages"],
-      "@lvdavis/*": ["./packages/*"]
+      "@ixsu": ["./packages"],
+      "@ixsu/*": ["./packages/*"]
     }
   },
   "exclude": ["node_modules"]

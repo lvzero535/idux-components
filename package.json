@@ -1,5 +1,5 @@
 {
-  "name": "lvdavis",
+  "name": "ixsu",
   "version": "0.0.2",
   "main": "./lib/index.js",
   "keywords": [
@@ -18,6 +18,7 @@
     "build:cmps": "gulp components --gulpfile ./scripts/gulp/gulpfile.ts",
     "build:css": "gulp style --gulpfile ./scripts/gulp/gulpfile.ts",
     "preview": "vite preview",
+    "pubs": "npm run pub:cmp && npm run pub:utils",
     "pub:cmp": "npm publish ./lib/components --access public",
     "pub:utils": "npm publish ./lib/utils --access public",
     "fmt": "prettier --write ."

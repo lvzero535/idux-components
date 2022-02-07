@@ -3,7 +3,7 @@ import { ButtonProps } from './types'
 import { defineComponent } from 'vue'
 
 export default defineComponent({
-  name: 'IsButton',
+  name: 'IxsButton',
   props: ButtonProps,
 })
 </script>

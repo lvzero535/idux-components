@@ -10,9 +10,12 @@ task('buildJs', series(parallel(indexBuild, componentsBuild, utilsBuild), copyPa
 
 task(
   'build',
-  parallel(
-    parallel(indexBuildStyle, componentsBuildStyle),
-    series(parallel(indexBuild, componentsBuild, utilsBuild), copyPackageJson),
+  series(
+    beforeStart,
+    parallel(
+      parallel(indexBuildStyle, componentsBuildStyle),
+      series(parallel(indexBuild, componentsBuild, utilsBuild), copyPackageJson),
+    ),
   ),
 )
 

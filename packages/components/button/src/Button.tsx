@@ -3,7 +3,7 @@ import { defineComponent } from 'vue'
 import { ButtonProps } from './types'
 
 export default defineComponent({
-  name: 'IsButton',
+  name: 'IxsButton',
   props: ButtonProps,
   setup(props) {
     const onClickHandler = (...rest: any[]) => {

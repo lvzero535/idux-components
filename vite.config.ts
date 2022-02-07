@@ -9,7 +9,7 @@ import { resolve } from 'path'
 export default defineConfig({
   resolve: {
     alias: {
-      '@lvdavis': resolve(__dirname, './packages'),
+      '@ixsu': resolve(__dirname, './packages'),
     },
   },
   plugins: [

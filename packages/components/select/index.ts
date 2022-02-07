@@ -1,9 +1,9 @@
-import IsSelect from './src/Select'
+import IxsSelect from './src/Select'
 import type { App } from 'vue'
 
-export { IsSelect }
+export { IxsSelect }
 
 export default (app: App) => {
-  console.log(IsSelect)
-  app.component(IsSelect.name, IsSelect)
+  console.log(IxsSelect)
+  app.component(IxsSelect.name, IxsSelect)
 }

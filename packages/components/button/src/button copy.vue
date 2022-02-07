@@ -9,7 +9,7 @@ defineProps<Props>()
 </script>
 <script lang="ts">
 export default {
-  name: 'IsButton',
+  name: 'IxsButton',
 }
 </script>
 <template>

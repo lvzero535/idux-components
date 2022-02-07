@@ -1,14 +1,12 @@
-import { existsSync, mkdirpSync, removeSync, statSync } from 'fs-extra'
+import { existsSync, removeSync, statSync } from 'fs-extra'
 import { TaskFunction } from 'gulp'
 import { outRootDir } from '../Config'
 
 function cleanDir() {
   if (existsSync(outRootDir)) {
-    console.log('clean dir', outRootDir)
+    console.log('clean dir ==>', outRootDir)
     removeSync(outRootDir)
   }
-  mkdirpSync(outRootDir)
-  console.log('make dir', outRootDir)
 }
 
 // 判断是否是目录

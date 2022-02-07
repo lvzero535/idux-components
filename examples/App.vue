@@ -7,10 +7,10 @@ import HelloWorld from './components/HelloWorld.vue'
 <template>
   <img alt="Vue logo" src="./assets/logo.png" />
   <HelloWorld msg="Hello Vue 3 + TypeScript + Vite" />
-  <IsButton text="IsButtonTest"></IsButton>
-  <IsSelect></IsSelect>
+  <IxsButton text="IxsButtonTest"></IxsButton>
+  <IxsSelect></IxsSelect>
   <br />
-  <IsInput></IsInput>
+  <IxsInput></IxsInput>
 </template>
 
 <style>

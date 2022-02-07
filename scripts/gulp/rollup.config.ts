@@ -2,7 +2,7 @@ import vue from 'rollup-plugin-vue'
 import ts from 'rollup-plugin-typescript2'
 import vueJsx from '@vitejs/plugin-vue-jsx'
 
-const externalDeps = ['vue', '@idux', '@lvdavis']
+const externalDeps = ['vue', '@idux', '@ixsu']
 
 export function createRollupConfig(input: string, file: string, packageName: string) {
   const external = (id: string) => externalDeps.some(item => new RegExp(`^${item}`).test(id))

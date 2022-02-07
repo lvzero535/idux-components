@@ -1,11 +1,11 @@
 import { IxSelect, IxSelectOption } from '@idux/components/select'
 import { ref, watch } from 'vue'
 import { defineComponent } from 'vue'
-import { IsSelectProps } from './types'
+import { IxsSelectProps } from './types'
 
 export default defineComponent({
-  name: 'IsSelect',
-  props: IsSelectProps,
+  name: 'IxsSelect',
+  props: IxsSelectProps,
   setup(props) {
     const value = ref('tom')
     watch(value, nv => {

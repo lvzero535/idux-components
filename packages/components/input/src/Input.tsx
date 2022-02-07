@@ -3,7 +3,7 @@ import { ref, watch } from 'vue'
 import { defineComponent } from 'vue'
 
 export default defineComponent({
-  name: 'IsInput',
+  name: 'IxsInput',
   setup() {
     const value = ref('a')
     watch(value, nv => {

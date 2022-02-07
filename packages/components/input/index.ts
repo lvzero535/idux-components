@@ -1,9 +1,9 @@
-import IsInput from './src/Input'
+import IxsInput from './src/Input'
 import type { App } from 'vue'
 
-export { IsInput }
+export { IxsInput }
 
 export default (app: App) => {
-  console.log(IsInput)
-  app.component(IsInput.name, IsInput)
+  console.log(IxsInput)
+  app.component(IxsInput.name, IxsInput)
 }
