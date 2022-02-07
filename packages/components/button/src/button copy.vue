@@ -14,5 +14,7 @@ export default {
 }
 </script>
 <template>
-  <IxButton mode="primary">{{ text }}</IxButton>
+  <IxButton mode="primary">
+    {{ text }}
+  </IxButton>
 </template>

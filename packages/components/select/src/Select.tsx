@@ -1,7 +1,7 @@
-import { IxSelect, IxSelectOption, SelectData } from "@idux/components/select";
-import { ref, watch } from "vue";
-import { defineComponent } from "vue";
-import { IsSelectProps } from "./types";
+import { IxSelect, IxSelectOption } from '@idux/components/select';
+import { ref, watch } from 'vue';
+import { defineComponent } from 'vue';
+import { IsSelectProps } from './types';
 
 export default defineComponent({
   name: 'IsSelect',

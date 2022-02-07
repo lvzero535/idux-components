@@ -1,6 +1,6 @@
-import { IxInput } from "@idux/components/input";
-import { ref, watch } from "vue";
-import { defineComponent } from "vue";
+import { IxInput } from '@idux/components/input';
+import { ref, watch } from 'vue';
+import { defineComponent } from 'vue';
 
 export default defineComponent({
   name: 'IsInput',

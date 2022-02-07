@@ -1,8 +1,13 @@
-@import '../../style/vars.less';
+@import "../../style/vars.less";
+
+@test: red;
 
 .is-button {
-  color: aliceblue;
+  color: @test;
   .a {
     color: @primary-color;
+  }
+  a {
+    cursor: pointer;
   }
 }
