@@ -62,9 +62,6 @@ export default defineUserConfig<DefaultThemeOptions>({
         },
       },
       plugins: [vueJsx()],
-      ssr: {
-        external: ['requestAnimationFrame'],
-      },
     },
   },
 })

@@ -7,7 +7,9 @@
 ## 样例
 
 <br />
+<ClientOnly>
 <IxsInput></IxsInput>
+</ClientOnly>
 
 ```html
 <IxsInput></IxsInput>

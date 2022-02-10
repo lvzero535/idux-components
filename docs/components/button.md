@@ -8,8 +8,9 @@
 
 ### 样例：text1
 
-<br />
+<ClientOnly>
 <IxsButton :text="text1"></IxsButton>
+</ClientOnly>
 
 ```vue
 <IxsButton :text="text1"></IxsButton>
@@ -17,8 +18,9 @@
 
 ### 样例：text2
 
-<br />
+<ClientOnly>
 <IxsButton :text="text2"></IxsButton>
+</ClientOnly>
 
 ```vue
 <IxsButton :text="text2"></IxsButton>
