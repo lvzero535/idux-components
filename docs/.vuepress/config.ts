@@ -2,6 +2,7 @@ import { defineUserConfig } from 'vuepress'
 import type { DefaultThemeOptions } from 'vuepress'
 import { resolve } from 'path'
 import vueJsx from '@vitejs/plugin-vue-jsx'
+import { sidebarMenus } from './barConfig'
 
 export default defineUserConfig<DefaultThemeOptions>({
   // 站点配置
@@ -26,32 +27,7 @@ export default defineUserConfig<DefaultThemeOptions>({
         link: '/utils/',
       },
     ],
-    sidebar: {
-      '/components/': [
-        {
-          text: 'Button',
-          link: '/components/button',
-        },
-        {
-          text: 'Input',
-          link: '/components/input',
-        },
-        {
-          text: 'Select',
-          link: '/components/select',
-        },
-      ],
-      '/utils/': [
-        {
-          text: 'I18nNext',
-          link: '/utils/i18n-next',
-        },
-        {
-          text: 'Validate',
-          link: '/utils/validate',
-        },
-      ],
-    },
+    sidebar: sidebarMenus,
   },
   bundlerConfig: {
     evergreen: true,
@@ -64,4 +40,5 @@ export default defineUserConfig<DefaultThemeOptions>({
       plugins: [vueJsx()],
     },
   },
+  dest: resolve(__dirname, '../../public'),
 })
