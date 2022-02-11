@@ -11,6 +11,11 @@ export const projectRoot = join(__dirname, '..')
 export const componentsRootDir = join(projectRoot, './packages/components')
 
 /**
+ * 组件文档目录
+ */
+export const componentsDocsDir = join(projectRoot, './docs/components')
+
+/**
  * 工具根据目录
  */
 export const utilsRootDir = join(projectRoot, './packages/utils')

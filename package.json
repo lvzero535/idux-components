@@ -24,7 +24,8 @@
     "fmt": "prettier --write .",
     "test": "jest",
     "docs:dev": "vuepress dev docs",
-    "docs:build": "vuepress build docs"
+    "docs:build": "vuepress build docs",
+    "gen": "ts-node ./scripts/gen/generate.ts"
   },
   "lint-staged": {
     "*.{js,ts,tsx,vue,json}": [
