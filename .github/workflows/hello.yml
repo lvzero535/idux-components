@@ -1,0 +1,12 @@
+# .github/workflows/hello.yml
+name: Hello Workflow
+
+on: [push]  # 当有代码 push 时触发
+
+jobs:
+  say-hello:
+    runs-on: ubuntu-latest  # 使用 GitHub 的 Ubuntu 虚拟机运行
+
+    steps:
+      - name: 打印 Hello
+        run: echo "Hello, GitHub Actions!"
