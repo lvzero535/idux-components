@@ -20,6 +20,10 @@ jobs:
           echo "${{ secrets.DEPLOY_KEY }}" > ~/.ssh/id_rsa
           chmod 600 ~/.ssh/id_rsa
           ssh-keyscan -H ${{ secrets.REMOTE_HOST }} >> ~/.ssh/known_hosts
+          echo "REMOTE_HOST"
+          cat ~/.ssh/known_hosts
+          echo "id_rsa"
+          cat ~/.ssh/id_rsa
 
       - name: Run deployment commands
         run: |
