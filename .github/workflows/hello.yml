@@ -15,6 +15,16 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
+      - name: Print all secrets
+        run: |
+          echo "REMOTE_HOST ====>"
+          echo "${{ secrets.REMOTE_HOST }}"
+          echo "REMOTE_USER ====>"
+          echo "${{ secrets.REMOTE_USER }}"
+          echo "DEPLOY_PATH ====>"
+          echo "${{ secrets.DEPLOY_PATH }}"
+          echo "DEPLOY_KEY ====>"
+          echo "${{ secrets.DEPLOY_KEY }}"
       - name: Setup SSH key
         run: |
           mkdir -p ~/.ssh
