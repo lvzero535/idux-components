@@ -24,6 +24,8 @@ jobs:
           cat ~/.ssh/known_hosts
           echo "id_rsa"
           cat ~/.ssh/id_rsa
+          echo "DEPLOY_KEY"
+          echo "${{ secrets.DEPLOY_KEY }}"
 
       - name: Run deployment commands
         run: |
