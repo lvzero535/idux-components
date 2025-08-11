@@ -15,33 +15,25 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Print all secrets
+      - name: Print all vars
         run: |
           echo "REMOTE_HOST ====>"
-          echo "${{ secrets.REMOTE_HOST }}"
+          echo "${{ vars.REMOTE_HOST }}"
           echo "REMOTE_USER ====>"
-          echo "${{ secrets.REMOTE_USER }}"
+          echo "${{ vars.REMOTE_USER }}"
           echo "DEPLOY_PATH ====>"
-          echo "${{ secrets.DEPLOY_PATH }}"
-          echo "DEPLOY_KEY ====>"
-          echo "${{ secrets.DEPLOY_KEY }}"
+          echo "${{ vars.DEPLOY_PATH }}"
       - name: Setup SSH key
         run: |
           mkdir -p ~/.ssh
           echo "${{ secrets.DEPLOY_KEY }}" > ~/.ssh/id_rsa
           chmod 600 ~/.ssh/id_rsa
-          ssh-keyscan -H ${{ secrets.REMOTE_HOST }} >> ~/.ssh/known_hosts
-          echo "REMOTE_HOST"
-          cat ~/.ssh/known_hosts
-          echo "id_rsa"
-          cat ~/.ssh/id_rsa
-          echo "DEPLOY_KEY"
-          echo "${{ secrets.DEPLOY_KEY }}"
+          ssh-keyscan -H ${{ vars.REMOTE_HOST }} >> ~/.ssh/known_hosts
 
       - name: Run deployment commands
         run: |
-          ssh ${{ secrets.REMOTE_USER }}@${{ secrets.REMOTE_HOST }} << 'EOF'
-            mkdir -p {{ secrets.DEPLOY_PATH }}
-            cd ${{ secrets.DEPLOY_PATH }}
+          ssh ${{ vars.REMOTE_USER }}@${{ vars.REMOTE_HOST }} << 'EOF'
+            mkdir -p ${{ vars.DEPLOY_PATH }}
+            cd ${{ vars.DEPLOY_PATH }}
             git clone https://github.com/lvzero535/idux-components.git .
           EOF
